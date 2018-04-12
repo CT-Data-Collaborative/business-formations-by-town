@@ -22,6 +22,7 @@ formations_df$`Measure Type` <- "Number"
 
 #Group by town, add up all formations
 formations_df_calc <- unique(formations_df %>% 
+  filter(Type == "All Business Entities") %>% 
   group_by(Town) %>% 
   mutate(Value = sum(Value, na.rm=T)) %>% 
   select(Town, FIPS, Year, `Measure Type`, Variable, Value) %>% 

@@ -165,7 +165,7 @@
       "expected": {
         "type": "$match",
         "number type": "float",
-        "value": 1614
+        "value": 807
       }
     }
   ],
